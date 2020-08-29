@@ -1,8 +1,10 @@
-# uncompyle6 version 3.7.3
-# Python bytecode 2.7
-# Decompiled from: Python 2.7.17 (default, Dec  5 2019, 10:47:43) 
-# [GCC 4.2.1 Compatible Android (5220042 based on r346389c) Clang 8.0.7 (https://
-# Embedded file name: dg
+#!/usr/bin/python2
+#coding=utf-8
+#The Credit For This Code Goes To Tech Qaiser
+#If You Wanna Take Credits For This Code, Please Look Yourself Again...
+#Reserved2020
+
+
 import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, requests, mechanize
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
@@ -82,9 +84,7 @@ def login():
         toket = raw_input(' login token')
         tik()
         try:
-            
-	print logo
-	toket = raw_input("\033[1;97m[?] \033[1;97mToken\033[1;97m : Enter Acces Token Here :- ")
+             toket = raw_input("\033[1;97m[?] \033[1;97mToken\033[1;97m : Enter Acces Token Here :- ")
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)

@@ -75,17 +75,18 @@ def login():
     except (KeyError, IOError):
         os.system('clear')
         print logo2
-        print 'login using token '
+        print '[1] login using token '
         pilih_login()
         
 pilih_login()
-       peak = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
-	if peak =="":
+       unikers = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
+	if unikers =="":
 		print "\x1b[1;91mFill in correctly"
 		pilih_login()
-	elif peak =="1":
+	elif unikers =="1":
 		tokenz()
-       def tokenz():
+		
+   def tokenz():
 	os.system('clear')
 	print logo
 	toket = raw_input("\033[1;97m[?] \033[1;97mToken\033[1;97m : Enter Acces Token Here :- ")

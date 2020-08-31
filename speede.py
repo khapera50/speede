@@ -1,3 +1,9 @@
+#!/usr/bin/python2
+#coding=utf-8
+#The Credit For This Code Goes To QaiserAbbas
+#If You Wanna Take Credits For This Code, Please Look Yourself Again...
+#Reserved2020
+
 import os, sys, time, mechanize, itertools, datetime, random, hashlib, re, threading, json, getpass, urllib, cookielib
 from multiprocessing.pool import ThreadPool
 P = '\x1b[1;97m'

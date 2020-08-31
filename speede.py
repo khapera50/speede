@@ -1,7 +1,9 @@
-# uncompyle6 version 3.7.3
-# Python bytecode 2.7
-# Decompiled from: Python 2.7.17 (default, Dec  5 2019, 10:47:43) 
-# [GCC 4.2.1 Compatible Android (5220042 based on r346389c) Clang 8.0.7 (https://
+#!/usr/bin/python2
+#coding=utf-8
+#The Credit For This Code Goes To QaiserAbbas
+#If You Wanna Take Credits For This Code, Please Look Yourself Again...
+#Reserved2020
+
 import os, sys, time, mechanize, itertools, datetime, random, hashlib, re, threading, json, getpass, urllib, cookielib
 from multiprocessing.pool import ThreadPool
 P = '\x1b[1;97m'

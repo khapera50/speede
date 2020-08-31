@@ -109,11 +109,9 @@ jalan('                                contact me in fb Qaiser Abbas 🔒     ')
 def masuk():
     os.system('clear')
     print logo
-    print 36 * '======================'
     print '\033[1;95m 1 Login Token Facebook'
     print '\033[1;95m 2 Login With Facebook'
     print '\x1b[1;91m 0 Exit'
-    print 36 * '======================'
     pilih_masuk()
 
 

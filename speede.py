@@ -41,12 +41,6 @@ os.system('clear')
 done = False
 
 
-
-t = threading.Thread(target=animate)
-t.start()
-time.sleep(5)
-done = True
-
 def keluar():
     print '\x1b[1;97m{\x1b[1;91m!\x1b[1;97m} Keluar'
     os.sys.exit()
